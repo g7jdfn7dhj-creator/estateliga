@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>ESTATE LIGA — Properties</title>
 <link rel="stylesheet" href="styles.css" />
 <style>
@@ -112,6 +113,19 @@
   .card:hover {
     transform: translateY(-6px);
     transition: transform 0.4s ease;
+  }
+  /* responsive */
+  @media (max-width: 1100px) {
+    .content { padding: 0 40px 20px; }
+    .grid { grid-template-columns: 1fr; gap: 24px; margin-top: 28px; }
+    .card { min-height: 0; }
+    .card-media { height: 200px; }
+  }
+  @media (max-width: 600px) {
+    .content { padding: 0 16px 16px; }
+    .card h2 { font-size: 22px; }
+    .card .desc { font-size: 16px; }
+    .card-body { padding: 24px 20px 22px; }
   }
 </style>
 </head>
