@@ -152,7 +152,6 @@
       footer_contact: 'Констанца · Мамая ◆ Румыния',
     },
   };
-  };
 
   function apply(lang) {
     const pack = dict[lang] || dict[DEFAULT];
@@ -175,8 +174,12 @@
       if (saved && dict[saved]) lang = saved;
     } catch (_) {}
     apply(lang);
-    document.querySelectorAll('.lang-btn').forEach((btn) => {
-      btn.addEventListener('click', () => apply(btn.dataset.lang));
+    document.addEventListener('click', (e) => {
+      const btn = e.target.closest('.lang-btn');
+      if (!btn) return;
+      e.preventDefault();
+      const next = btn.getAttribute('data-lang');
+      if (next && dict[next]) apply(next);
     });
   }
 
