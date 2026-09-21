@@ -6,6 +6,7 @@
 <title>ESTATE LIGA — Home</title>
 <link rel="stylesheet" href="styles.css" />
 <style>
+
   .hero {
     flex: 1;
     display: flex;
@@ -25,6 +26,7 @@
     pointer-events: none;
     opacity: 0.07;
     z-index: 0;
+    animation: watermarkBreathe 11s ease-in-out infinite;
   }
   .watermark img {
     width: 520px;
@@ -38,6 +40,7 @@
     text-transform: uppercase;
     color: var(--gold-muted);
     margin-bottom: 28px;
+    animation: fadeIn 2.2s 0.35s both;
   }
   .hero h1 {
     font-family: 'Cinzel', serif;
@@ -51,6 +54,7 @@
     color: transparent;
     text-shadow: 0 0 80px rgba(201,162,39,0.15);
     margin-bottom: 8px;
+    animation: riseSoft 2.6s 0.4s cubic-bezier(0.16, 1, 0.3, 1) both;
   }
   .glow {
     position: absolute;
@@ -63,6 +67,7 @@
     filter: blur(40px);
     z-index: 0;
     pointer-events: none;
+    animation: glowPulse 9s ease-in-out infinite;
   }
   .tagline {
     font-family: 'Cormorant Garamond', serif;
@@ -73,6 +78,7 @@
     max-width: 720px;
     margin: 8px auto 0;
     line-height: 1.5;
+    animation: fadeInUp 2.4s 0.9s both;
   }
   .cta-row {
     display: flex;
@@ -86,17 +92,8 @@
     letter-spacing: 0.4em;
     text-transform: uppercase;
     color: rgba(201,162,39,0.45);
+    animation: fadeIn 2.2s 1.8s both;
   }
-  .watermark {
-    animation: watermarkBreathe 11s ease-in-out infinite;
-  }
-  .glow {
-    animation: glowPulse 9s ease-in-out infinite;
-  }
-  .eyebrow { animation: fadeIn 2.2s 0.35s both; }
-  .hero h1 { animation: riseSoft 2.6s 0.4s cubic-bezier(0.16, 1, 0.3, 1) both; }
-  .tagline { animation: fadeInUp 2.4s 0.9s both; }
-  .sub-label { animation: fadeIn 2.2s 1.8s both; }
   /* responsive */
   @media (max-width: 900px) {
     .hero { padding: 24px 24px 16px; }
@@ -111,6 +108,7 @@
     .hero h1 { font-size: 34px !important; letter-spacing: 0.1em !important; }
     .tagline { font-size: 16px; }
   }
+
 </style>
 </head>
 <body>
@@ -126,10 +124,54 @@
       <span class="brand-text">ESTATE LIGA</span>
     </div>
     <div class="header-right">
-    <div class="lang-switch" role="group" aria-label="Language">
-      <button type="button" class="lang-btn active" data-lang="en" title="English" aria-label="English" aria-pressed="true">
-        <img src="assets/flags/en.svg" alt="" width="22" height="15" />
-        <span data-i18n="footer_home">Luxury Residences ◆ Private Advisory</span>
+      <div class="lang-switch" role="group" aria-label="Language">
+        <button type="button" class="lang-btn active" data-lang="en" title="English" aria-label="English" aria-pressed="true">
+          <img src="assets/flags/en.svg" alt="" width="22" height="15" />
+          <span>EN</span>
+        </button>
+        <button type="button" class="lang-btn" data-lang="ro" title="Română" aria-label="Română" aria-pressed="false">
+          <img src="assets/flags/ro.svg" alt="" width="22" height="15" />
+          <span>RO</span>
+        </button>
+        <button type="button" class="lang-btn" data-lang="de" title="Deutsch" aria-label="Deutsch" aria-pressed="false">
+          <img src="assets/flags/de.svg" alt="" width="22" height="15" />
+          <span>DE</span>
+        </button>
+        <button type="button" class="lang-btn" data-lang="ru" title="Русский" aria-label="Русский" aria-pressed="false">
+          <img src="assets/flags/ru.svg" alt="" width="22" height="15" />
+          <span>RU</span>
+        </button>
+      </div>
+      <nav>
+        <ul class="nav">
+          <li><a class="active" href="index.html"><span data-i18n="nav_home">Home</span></a></li>
+          <li><a href="properties.html"><span data-i18n="nav_properties">Properties</span></a></li>
+          <li><a href="about.html"><span data-i18n="nav_about">About</span></a></li>
+          <li><a href="contact.html"><span data-i18n="nav_contact">Contact</span></a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main hero">
+    <div class="glow"></div>
+    <div class="watermark"><img src="assets/logo.jpeg" alt="" /></div>
+    <div class="hero-inner">
+      <div class="eyebrow" data-i18n="eyebrow">Private Real Estate · Established Discretion</div>
+      <h1>ESTATE LIGA</h1>
+      <div class="gold-line"></div>
+      <p class="tagline" data-i18n="tagline">Exclusive estates curated for those who seek heritage, silence, and enduring beauty.</p>
+      <div class="cta-row">
+        <a class="btn btn-solid" href="properties.html" data-i18n="cta_view">View Estates</a>
+        <a class="btn btn-outline" href="contact.html" data-i18n="cta_contact">Contact</a>
+      </div>
+      <div class="sub-label" data-i18n="by_appointment">By appointment only</div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <span>© Estate Liga</span>
+    <span data-i18n="footer_home">Luxury Residences ◆ Private Advisory</span>
     <span>estateliga.com</span>
   </footer>
 </div>
