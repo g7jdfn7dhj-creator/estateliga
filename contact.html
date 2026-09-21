@@ -173,19 +173,19 @@
     </div>
     <div class="header-right">
     <div class="lang-switch" role="group" aria-label="Language">
-      <button type="button" class="lang-btn active" data-lang="en" title="English" aria-label="English" aria-pressed="true">
+      <button type="button" class="lang-btn active" data-lang="en" title="English" aria-label="English" aria-pressed="true" onclick="return window.__setLang && window.__setLang(\'en\')">
         <img src="assets/flags/en.svg" alt="" width="22" height="15" />
         <span>EN</span>
       </button>
-      <button type="button" class="lang-btn" data-lang="ro" title="Română" aria-label="Română" aria-pressed="false">
+      <button type="button" class="lang-btn" data-lang="ro" title="Română" aria-label="Română" aria-pressed="false" onclick="return window.__setLang && window.__setLang(\'ro\')">
         <img src="assets/flags/ro.svg" alt="" width="22" height="15" />
         <span>RO</span>
       </button>
-      <button type="button" class="lang-btn" data-lang="de" title="Deutsch" aria-label="Deutsch" aria-pressed="false">
+      <button type="button" class="lang-btn" data-lang="de" title="Deutsch" aria-label="Deutsch" aria-pressed="false" onclick="return window.__setLang && window.__setLang(\'de\')">
         <img src="assets/flags/de.svg" alt="" width="22" height="15" />
         <span>DE</span>
       </button>
-      <button type="button" class="lang-btn" data-lang="ru" title="Русский" aria-label="Русский" aria-pressed="false">
+      <button type="button" class="lang-btn" data-lang="ru" title="Русский" aria-label="Русский" aria-pressed="false" onclick="return window.__setLang && window.__setLang(\'ru\')">
         <img src="assets/flags/ru.svg" alt="" width="22" height="15" />
         <span>RU</span>
       </button>
@@ -245,6 +245,17 @@
     <span>estateliga.com</span>
   </footer>
 </div>
-  <script src="assets/i18n.js" defer></script>
+  <script>
+  window.__setLang = function (lang) {
+    try {
+      // Prefer full i18n module if loaded
+      if (window.__estateligaApply) { window.__estateligaApply(lang); return false; }
+      localStorage.setItem('estateliga-lang', lang);
+      location.reload();
+    } catch (e) { location.reload(); }
+    return false;
+  };
+  </script>
+  <script src="assets/i18n.js?v=3" defer></script>
 </body>
 </html>
