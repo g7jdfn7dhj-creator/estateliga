@@ -591,3 +591,32 @@ h1.page-title {
   .lang-switch { gap: 6px; flex-wrap: wrap; }
   .lang-btn { padding: 5px 8px; font-size: 10px; }
 }
+
+
+/* Empty properties state */
+.empty-listings {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 48px 24px 64px;
+  min-height: 280px;
+}
+.empty-title {
+  font-family: 'Cinzel', serif;
+  font-size: 22px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--gold-light);
+  margin-bottom: 16px;
+}
+.empty-text {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 20px;
+  color: var(--text-muted);
+  max-width: 520px;
+  line-height: 1.55;
+  letter-spacing: 0.04em;
+}
