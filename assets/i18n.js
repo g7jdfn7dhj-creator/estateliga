@@ -153,6 +153,22 @@
     },
   };
 
+
+  function bustLinks() {
+    document.querySelectorAll('a[href]').forEach((a) => {
+      const href = a.getAttribute('href');
+      if (!href || href.startsWith('http') || href.startsWith('#') || href.startsWith('mailto:')) return;
+      if (!/\.html(\?|$)/.test(href)) return;
+      try {
+        const url = new URL(href, location.href);
+        url.searchParams.set('v', '5');
+        // keep relative path
+        const file = url.pathname.split('/').pop();
+        a.setAttribute('href', file + '?' + url.searchParams.toString());
+      } catch (_) {}
+    });
+  }
+
   function apply(lang) {
     const pack = dict[lang] || dict[DEFAULT];
     document.documentElement.lang = lang === 'en' ? 'en' : lang;
@@ -176,6 +192,7 @@
     } catch (_) {}
     window.__estateligaApply = apply;
     apply(lang);
+    bustLinks();
     document.addEventListener('click', (e) => {
       const btn = e.target.closest('.lang-btn');
       if (!btn) return;
