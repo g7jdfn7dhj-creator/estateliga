@@ -536,3 +536,58 @@ h1.page-title {
     transition-duration: 0.01ms !important;
   }
 }
+
+
+/* Language switcher — unified flag buttons */
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 36px;
+}
+.lang-switch {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.lang-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 6px 10px;
+  background: rgba(10,10,10,0.55);
+  border: 1px solid rgba(201,162,39,0.35);
+  color: var(--gold);
+  cursor: pointer;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  transition: border-color 0.25s, box-shadow 0.25s, background 0.25s;
+}
+.lang-btn img {
+  display: block;
+  width: 22px;
+  height: 15px;
+  object-fit: cover;
+  border: 1px solid rgba(201,162,39,0.25);
+}
+.lang-btn:hover {
+  border-color: rgba(201,162,39,0.7);
+  box-shadow: 0 0 14px rgba(201,162,39,0.18);
+}
+.lang-btn.active {
+  border-color: var(--gold);
+  background: rgba(201,162,39,0.12);
+  box-shadow: 0 0 18px rgba(201,162,39,0.22);
+}
+@media (max-width: 900px) {
+  .header-right {
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+  }
+  .lang-switch { gap: 6px; flex-wrap: wrap; }
+  .lang-btn { padding: 5px 8px; font-size: 10px; }
+}

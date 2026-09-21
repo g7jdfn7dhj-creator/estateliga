@@ -141,64 +141,85 @@
       <img class="brand-logo" src="assets/logo.jpeg" alt="Estate Liga crest" />
       <span class="brand-text">ESTATE LIGA</span>
     </div>
+    <div class="header-right">
+    <div class="lang-switch" role="group" aria-label="Language">
+      <button type="button" class="lang-btn active" data-lang="en" title="English" aria-label="English" aria-pressed="true">
+        <img src="assets/flags/en.svg" alt="" width="22" height="15" />
+        <span>EN</span>
+      </button>
+      <button type="button" class="lang-btn" data-lang="ro" title="Română" aria-label="Română" aria-pressed="false">
+        <img src="assets/flags/ro.svg" alt="" width="22" height="15" />
+        <span>RO</span>
+      </button>
+      <button type="button" class="lang-btn" data-lang="de" title="Deutsch" aria-label="Deutsch" aria-pressed="false">
+        <img src="assets/flags/de.svg" alt="" width="22" height="15" />
+        <span>DE</span>
+      </button>
+      <button type="button" class="lang-btn" data-lang="ru" title="Русский" aria-label="Русский" aria-pressed="false">
+        <img src="assets/flags/ru.svg" alt="" width="22" height="15" />
+        <span>RU</span>
+      </button>
+    </div>
     <nav>
       <ul class="nav">
-        <li><a href="index.html">Home</a></li>
-        <li><a class="active" href="properties.html">Properties</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="contact.html">Contact</a></li>
+        <li><a href="index.html"><span data-i18n="nav_home">Home</span></a></li>
+        <li><a class="active" href="properties.html"><span data-i18n="nav_properties">Properties</span></a></li>
+        <li><a href="about.html"><span data-i18n="nav_about">About</span></a></li>
+        <li><a href="contact.html"><span data-i18n="nav_contact">Contact</span></a></li>
       </ul>
     </nav>
+    </div>
   </header>
 
   <main class="main content">
-    <h1 class="page-title">PROPERTIES</h1>
+    <h1 class="page-title" data-i18n="page_properties">PROPERTIES</h1>
     <div class="gold-line"></div>
-    <div class="grid">
+        <div class="grid">
       <article class="card">
-        <div class="card-media"><span>VILLA</span></div>
+        <div class="card-media"><span data-i18n="card1_type">VILLA</span></div>
         <div class="card-body">
-          <h2>Villa Aurora</h2>
-          <div class="loc">Lake Como · Italy</div>
-          <p class="desc">A sunlit lakeside villa with classical colonnades, private gardens, and everlasting views across the water.</p>
+          <h2 data-i18n="card1_title">Villa Aurora</h2>
+          <div class="loc" data-i18n="card1_loc">Lake Como · Italy</div>
+          <p class="desc" data-i18n="card1_desc">A sunlit lakeside villa with classical colonnades and quiet gardens above the water.</p>
           <div class="price-row">
             <span class="price">€12.8M</span>
-            <span class="meta">6 Bed · 980 m²</span>
+            <span class="meta" data-i18n="card1_meta">6 BED · 980 M²</span>
           </div>
         </div>
       </article>
       <article class="card">
-        <div class="card-media"><span>PALAZZO</span></div>
+        <div class="card-media"><span data-i18n="card2_type">PALAZZO</span></div>
         <div class="card-body">
-          <h2>Palazzo Verde</h2>
-          <div class="loc">Tuscany · Italy</div>
-          <p class="desc">Historic palazzo amid cypress hills — frescoed halls, olive groves, and a private chapel of quiet grandeur.</p>
+          <h2 data-i18n="card2_title">Palazzo Verde</h2>
+          <div class="loc" data-i18n="card2_loc">Tuscany · Italy</div>
+          <p class="desc" data-i18n="card2_desc">A hilltop palazzo among cypress, with frescoed halls and private olive groves.</p>
           <div class="price-row">
             <span class="price">€18.4M</span>
-            <span class="meta">12 Bed · 2,400 m²</span>
+            <span class="meta" data-i18n="card2_meta">12 BED · 2,400 M²</span>
           </div>
         </div>
       </article>
       <article class="card">
-        <div class="card-media"><span>MAISON</span></div>
+        <div class="card-media"><span data-i18n="card3_type">MAISON</span></div>
         <div class="card-body">
-          <h2>Maison Noire</h2>
-          <div class="loc">Saint-Tropez · France</div>
-          <p class="desc">An intimate black-stone maison with Mediterranean terraces, infinity pool, and absolute coastal privacy.</p>
+          <h2 data-i18n="card3_title">Maison Noire</h2>
+          <div class="loc" data-i18n="card3_loc">Saint-Tropez · France</div>
+          <p class="desc" data-i18n="card3_desc">A black-stone maison with Mediterranean terraces and absolute privacy.</p>
           <div class="price-row">
             <span class="price">€9.6M</span>
-            <span class="meta">5 Bed · 620 m²</span>
+            <span class="meta" data-i18n="card3_meta">5 BED · 620 M²</span>
           </div>
         </div>
       </article>
     </div>
-  </main>
+    </main>
 
   <footer class="footer">
     <span>© Estate Liga</span>
-    <span>Curated Inventory <span class="diamond">◆</span> Off-Market Available</span>
+    <span data-i18n="footer_properties">Curated Inventory ◆ Off-Market Available</span> Off-Market Available</span>
     <span>estateliga.com</span>
   </footer>
 </div>
+  <script src="assets/i18n.js" defer></script>
 </body>
 </html>

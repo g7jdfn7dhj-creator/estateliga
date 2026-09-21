@@ -109,18 +109,38 @@
       <img class="brand-logo" src="assets/logo.jpeg" alt="Estate Liga crest" />
       <span class="brand-text">ESTATE LIGA</span>
     </div>
+    <div class="header-right">
+    <div class="lang-switch" role="group" aria-label="Language">
+      <button type="button" class="lang-btn active" data-lang="en" title="English" aria-label="English" aria-pressed="true">
+        <img src="assets/flags/en.svg" alt="" width="22" height="15" />
+        <span>EN</span>
+      </button>
+      <button type="button" class="lang-btn" data-lang="ro" title="Română" aria-label="Română" aria-pressed="false">
+        <img src="assets/flags/ro.svg" alt="" width="22" height="15" />
+        <span>RO</span>
+      </button>
+      <button type="button" class="lang-btn" data-lang="de" title="Deutsch" aria-label="Deutsch" aria-pressed="false">
+        <img src="assets/flags/de.svg" alt="" width="22" height="15" />
+        <span>DE</span>
+      </button>
+      <button type="button" class="lang-btn" data-lang="ru" title="Русский" aria-label="Русский" aria-pressed="false">
+        <img src="assets/flags/ru.svg" alt="" width="22" height="15" />
+        <span>RU</span>
+      </button>
+    </div>
     <nav>
       <ul class="nav">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="properties.html">Properties</a></li>
-        <li><a class="active" href="about.html">About</a></li>
-        <li><a href="contact.html">Contact</a></li>
+        <li><a href="index.html"><span data-i18n="nav_home">Home</span></a></li>
+        <li><a href="properties.html"><span data-i18n="nav_properties">Properties</span></a></li>
+        <li><a class="active" href="about.html"><span data-i18n="nav_about">About</span></a></li>
+        <li><a href="contact.html"><span data-i18n="nav_contact">Contact</span></a></li>
       </ul>
     </nav>
+    </div>
   </header>
 
   <main class="main content">
-    <h1 class="page-title">ABOUT</h1>
+    <h1 class="page-title" data-i18n="page_about">ABOUT</h1>
     <div class="gold-line"></div>
     <img class="crest" src="assets/logo.jpeg" alt="Estate Liga heraldic crest" />
     <div class="blocks">
@@ -140,14 +160,15 @@
       </div>
     </div>
     <div class="gold-line" style="margin-top:36px"></div>
-    <p class="statement">“For those who inherit not merely houses, but a way of living.”</p>
+    <p class="statement" data-i18n="about_quote">“For those who inherit not merely houses, but a way of living.”</p>
   </main>
 
   <footer class="footer">
     <span>© Estate Liga</span>
-    <span>Heritage <span class="diamond">◆</span> Exclusivity <span class="diamond">◆</span> Discretion</span>
+    <span data-i18n="footer_about">Heritage ◆ Exclusivity ◆ Discretion</span> Exclusivity <span class="diamond">◆</span> Discretion</span>
     <span>estateliga.com</span>
   </footer>
 </div>
+  <script src="assets/i18n.js" defer></script>
 </body>
 </html>
