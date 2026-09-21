@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>ESTATE LIGA — Properties</title>
+<link rel="stylesheet" href="styles.css" />
+<style>
+  .content {
+    padding: 0 80px 20px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 36px;
+    margin-top: 40px;
+    flex: 1;
+    align-content: start;
+  }
+  .card {
+    border: 1px solid rgba(201,162,39,0.45);
+    background: linear-gradient(180deg, rgba(20,18,12,0.9) 0%, rgba(10,10,10,0.95) 100%);
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0 0 1px rgba(201,162,39,0.08), inset 0 0 40px rgba(201,162,39,0.03);
+    min-height: 520px;
+  }
+  .card-media {
+    height: 260px;
+    background:
+      linear-gradient(180deg, transparent 40%, rgba(8,8,8,0.85) 100%),
+      radial-gradient(ellipse at 50% 30%, rgba(201,162,39,0.12), transparent 60%),
+      linear-gradient(135deg, #1a1814 0%, #0d0d0d 100%);
+    border-bottom: 1px solid rgba(201,162,39,0.3);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .card-media::before {
+    content: '';
+    width: 72px;
+    height: 72px;
+    border: 1px solid rgba(201,162,39,0.35);
+    transform: rotate(45deg);
+    position: absolute;
+  }
+  .card-media span {
+    font-family: 'Cinzel', serif;
+    font-size: 11px;
+    letter-spacing: 0.3em;
+    color: rgba(201,162,39,0.55);
+    position: relative;
+    z-index: 1;
+  }
+  .card-body {
+    padding: 32px 28px 28px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+  }
+  .card h2 {
+    font-family: 'Cinzel', serif;
+    font-size: 26px;
+    font-weight: 500;
+    letter-spacing: 0.18em;
+    color: var(--gold-light);
+    margin-bottom: 10px;
+  }
+  .card .loc {
+    font-size: 12px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin-bottom: 18px;
+  }
+  .card .desc {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 18px;
+    line-height: 1.55;
+    color: #c8b896;
+    flex: 1;
+  }
+  .card .price-row {
+    margin-top: 28px;
+    padding-top: 18px;
+    border-top: 1px solid rgba(201,162,39,0.25);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .price {
+    font-family: 'Cinzel', serif;
+    font-size: 20px;
+    letter-spacing: 0.12em;
+    background: linear-gradient(180deg, #f0d978, #c9a227);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  .meta {
+    font-size: 11px;
+    letter-spacing: 0.16em;
+    color: rgba(201,162,39,0.6);
+    text-transform: uppercase;
+  }
+
+  .content > .gold-line { animation: lineExpand 1.2s 0.4s both; }
+  .card:hover {
+    transform: translateY(-6px);
+    transition: transform 0.4s ease;
+  }
+</style>
+</head>
+<body>
+<div class="page">
+  <div class="bg-motion" aria-hidden="true">
+    <div class="bg-motion__glow"></div>
+    <div class="bg-motion__grain"></div>
+  </div>
+
+  <header class="header">
+    <div class="brand">
+      <img class="brand-logo" src="assets/logo.jpeg" alt="Estate Liga crest" />
+      <span class="brand-text">ESTATE LIGA</span>
+    </div>
+    <nav>
+      <ul class="nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a class="active" href="properties.html">Properties</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="main content">
+    <h1 class="page-title">PROPERTIES</h1>
+    <div class="gold-line"></div>
+    <div class="grid">
+      <article class="card">
+        <div class="card-media"><span>VILLA</span></div>
+        <div class="card-body">
+          <h2>Villa Aurora</h2>
+          <div class="loc">Lake Como · Italy</div>
+          <p class="desc">A sunlit lakeside villa with classical colonnades, private gardens, and everlasting views across the water.</p>
+          <div class="price-row">
+            <span class="price">€12.8M</span>
+            <span class="meta">6 Bed · 980 m²</span>
+          </div>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-media"><span>PALAZZO</span></div>
+        <div class="card-body">
+          <h2>Palazzo Verde</h2>
+          <div class="loc">Tuscany · Italy</div>
+          <p class="desc">Historic palazzo amid cypress hills — frescoed halls, olive groves, and a private chapel of quiet grandeur.</p>
+          <div class="price-row">
+            <span class="price">€18.4M</span>
+            <span class="meta">12 Bed · 2,400 m²</span>
+          </div>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-media"><span>MAISON</span></div>
+        <div class="card-body">
+          <h2>Maison Noire</h2>
+          <div class="loc">Saint-Tropez · France</div>
+          <p class="desc">An intimate black-stone maison with Mediterranean terraces, infinity pool, and absolute coastal privacy.</p>
+          <div class="price-row">
+            <span class="price">€9.6M</span>
+            <span class="meta">5 Bed · 620 m²</span>
+          </div>
+        </div>
+      </article>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <span>© Estate Liga</span>
+    <span>Curated Inventory <span class="diamond">◆</span> Off-Market Available</span>
+    <span>estateliga.com</span>
+  </footer>
+</div>
+</body>
+</html>

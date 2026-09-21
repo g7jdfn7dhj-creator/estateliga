@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>ESTATE LIGA — About</title>
+<link rel="stylesheet" href="styles.css" />
+<style>
+  .content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 120px 10px;
+  }
+  .crest {
+    width: 160px;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 6px;
+    border: 1px solid rgba(201,162,39,0.4);
+    margin: 28px 0 8px;
+    box-shadow: 0 0 60px rgba(201,162,39,0.12);
+  }
+  .blocks {
+    display: grid;
+    grid-template-columns: 1fr 1px 1fr 1px 1fr;
+    gap: 0 40px;
+    margin-top: 36px;
+    width: 100%;
+    max-width: 1480px;
+  }
+  .divider-v {
+    background: linear-gradient(180deg, transparent, rgba(201,162,39,0.45), transparent);
+    width: 1px;
+  }
+  .block {
+    text-align: center;
+    padding: 8px 12px;
+  }
+  .block h3 {
+    font-family: 'Cinzel', serif;
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 0.28em;
+    color: var(--gold-light);
+    margin-bottom: 16px;
+  }
+  .block p {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 20px;
+    line-height: 1.65;
+    color: #c8b896;
+  }
+  .statement {
+    margin-top: 44px;
+    max-width: 820px;
+    text-align: center;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 24px;
+    font-style: italic;
+    color: var(--text-muted);
+    line-height: 1.6;
+    letter-spacing: 0.04em;
+  }
+
+  .crest {
+    animation: watermarkBreathe 11s ease-in-out infinite, riseSoft 2.4s 0.4s both;
+  }
+  .blocks .block {
+    animation: riseSoft 2.2s cubic-bezier(0.16, 1, 0.3, 1) both;
+  }
+  .blocks .block:nth-of-type(1) { animation-delay: 0.9s; }
+  .blocks .block:nth-of-type(2) { animation-delay: 0.9s; }
+  .blocks .block:nth-of-type(3) { animation-delay: 1.3s; }
+  .statement {
+    animation: fadeInUp 2.4s 1.6s both;
+  }
+</style>
+</head>
+<body>
+<div class="page">
+  <div class="bg-motion" aria-hidden="true">
+    <div class="bg-motion__glow"></div>
+    <div class="bg-motion__grain"></div>
+  </div>
+
+  <header class="header">
+    <div class="brand">
+      <img class="brand-logo" src="assets/logo.jpeg" alt="Estate Liga crest" />
+      <span class="brand-text">ESTATE LIGA</span>
+    </div>
+    <nav>
+      <ul class="nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="properties.html">Properties</a></li>
+        <li><a class="active" href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="main content">
+    <h1 class="page-title">ABOUT</h1>
+    <div class="gold-line"></div>
+    <img class="crest" src="assets/logo.jpeg" alt="Estate Liga heraldic crest" />
+    <div class="blocks">
+      <div class="block">
+        <h3>HERITAGE</h3>
+        <p>Rooted in classical tradition, Estate Liga preserves the quiet language of old-world estates — temples of stone, cypress silhouettes, and paths that lead home.</p>
+      </div>
+      <div class="divider-v"></div>
+      <div class="block">
+        <h3>EXCLUSIVITY</h3>
+        <p>We present only a select circle of residences. Each property is vetted for provenance, architecture, and the rare privilege of true privacy.</p>
+      </div>
+      <div class="divider-v"></div>
+      <div class="block">
+        <h3>DISCRETION</h3>
+        <p>Our advisory is confidential and personal. Introductions are made by appointment, with the same care afforded to family heirlooms.</p>
+      </div>
+    </div>
+    <div class="gold-line" style="margin-top:36px"></div>
+    <p class="statement">“For those who inherit not merely houses, but a way of living.”</p>
+  </main>
+
+  <footer class="footer">
+    <span>© Estate Liga</span>
+    <span>Heritage <span class="diamond">◆</span> Exclusivity <span class="diamond">◆</span> Discretion</span>
+    <span>estateliga.com</span>
+  </footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>ESTATE LIGA — Home</title>
+<link rel="stylesheet" href="styles.css" />
+<style>
+  .hero {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 40px 80px 20px;
+    position: relative;
+  }
+  .watermark {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+    opacity: 0.07;
+    z-index: 0;
+  }
+  .watermark img {
+    width: 520px;
+    height: auto;
+    filter: brightness(1.2) sepia(0.4);
+  }
+  .hero-inner { position: relative; z-index: 1; }
+  .eyebrow {
+    font-size: 12px;
+    letter-spacing: 0.45em;
+    text-transform: uppercase;
+    color: var(--gold-muted);
+    margin-bottom: 28px;
+  }
+  .hero h1 {
+    font-family: 'Cinzel', serif;
+    font-weight: 600;
+    font-size: 92px;
+    letter-spacing: 0.28em;
+    line-height: 1.05;
+    background: linear-gradient(180deg, #f8efc0 0%, #e8d48b 25%, #c9a227 55%, #8a6d1f 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-shadow: 0 0 80px rgba(201,162,39,0.15);
+    margin-bottom: 8px;
+  }
+  .glow {
+    position: absolute;
+    width: 700px;
+    height: 280px;
+    left: 50%;
+    top: 42%;
+    transform: translate(-50%, -50%);
+    background: radial-gradient(ellipse, rgba(201,162,39,0.18) 0%, transparent 70%);
+    filter: blur(40px);
+    z-index: 0;
+    pointer-events: none;
+  }
+  .tagline {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 26px;
+    font-weight: 400;
+    color: var(--text-muted);
+    letter-spacing: 0.12em;
+    max-width: 720px;
+    margin: 8px auto 0;
+    line-height: 1.5;
+  }
+  .cta-row {
+    display: flex;
+    gap: 24px;
+    margin-top: 48px;
+    justify-content: center;
+  }
+  .sub-label {
+    margin-top: 56px;
+    font-size: 11px;
+    letter-spacing: 0.4em;
+    text-transform: uppercase;
+    color: rgba(201,162,39,0.45);
+  }
+  .watermark {
+    animation: watermarkBreathe 11s ease-in-out infinite;
+  }
+  .glow {
+    animation: glowPulse 9s ease-in-out infinite;
+  }
+  .eyebrow { animation: fadeIn 2.2s 0.35s both; }
+  .hero h1 { animation: riseSoft 2.6s 0.4s cubic-bezier(0.16, 1, 0.3, 1) both; }
+  .tagline { animation: fadeInUp 2.4s 0.9s both; }
+  .sub-label { animation: fadeIn 2.2s 1.8s both; }
+</style>
+</head>
+<body>
+<div class="page">
+  <div class="bg-motion" aria-hidden="true">
+    <div class="bg-motion__glow"></div>
+    <div class="bg-motion__grain"></div>
+  </div>
+
+  <header class="header">
+    <div class="brand">
+      <img class="brand-logo" src="assets/logo.jpeg" alt="Estate Liga crest" />
+      <span class="brand-text">ESTATE LIGA</span>
+    </div>
+    <nav>
+      <ul class="nav">
+        <li><a class="active" href="index.html">Home</a></li>
+        <li><a href="properties.html">Properties</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="main hero">
+    <div class="glow"></div>
+    <div class="watermark"><img src="assets/logo.jpeg" alt="" /></div>
+    <div class="hero-inner">
+      <div class="eyebrow">Private Real Estate · Established Discretion</div>
+      <h1>ESTATE LIGA</h1>
+      <div class="gold-line"></div>
+      <p class="tagline">Exclusive estates curated for those who seek heritage, silence, and enduring beauty.</p>
+      <div class="cta-row">
+        <a class="btn btn-solid" href="properties.html">View Estates</a>
+        <a class="btn btn-outline" href="contact.html">Contact</a>
+      </div>
+      <div class="sub-label">By appointment only</div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <span>© Estate Liga</span>
+    <span>Luxury Residences <span class="diamond">◆</span> Private Advisory</span>
+    <span>estateliga.com</span>
+  </footer>
+</div>
+</body>
+</html>

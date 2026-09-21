@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>ESTATE LIGA — Contact</title>
+<link rel="stylesheet" href="styles.css" />
+<style>
+  .content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 80px 10px;
+  }
+  .layout {
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: 64px;
+    width: 100%;
+    max-width: 1280px;
+    margin-top: 36px;
+    align-items: start;
+  }
+  .form {
+    border: 1px solid rgba(201,162,39,0.4);
+    padding: 40px 44px;
+    background: linear-gradient(180deg, rgba(18,16,12,0.85), rgba(8,8,8,0.95));
+    box-shadow: inset 0 0 50px rgba(201,162,39,0.04);
+  }
+  .field {
+    margin-bottom: 26px;
+  }
+  .field label {
+    display: block;
+    font-size: 11px;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 10px;
+  }
+  .field input,
+  .field textarea {
+    width: 100%;
+    background: rgba(0,0,0,0.45);
+    border: 1px solid rgba(201,162,39,0.45);
+    color: var(--text);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    letter-spacing: 0.06em;
+    padding: 14px 16px;
+    outline: none;
+  }
+  .field textarea {
+    min-height: 140px;
+    resize: none;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 18px;
+  }
+  .submit {
+    margin-top: 8px;
+    width: 100%;
+    border: none;
+    padding: 18px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.32em;
+    text-transform: uppercase;
+    background: linear-gradient(180deg, #e8d48b 0%, #c9a227 40%, #8a6d1f 100%);
+    color: #1a1408;
+    cursor: default;
+    box-shadow: 0 0 28px rgba(201,162,39,0.22);
+  }
+  .details {
+    padding-top: 12px;
+  }
+  .details h2 {
+    font-family: 'Cinzel', serif;
+    font-size: 22px;
+    letter-spacing: 0.24em;
+    color: var(--gold-light);
+    margin-bottom: 28px;
+  }
+  .detail-item {
+    padding: 22px 0;
+    border-bottom: 1px solid rgba(201,162,39,0.28);
+  }
+  .detail-item:first-of-type {
+    border-top: 1px solid rgba(201,162,39,0.28);
+  }
+  .detail-item .label {
+    font-size: 11px;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: rgba(201,162,39,0.65);
+    margin-bottom: 8px;
+  }
+  .detail-item .value {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px;
+    color: var(--text);
+  }
+  .note {
+    margin-top: 36px;
+    font-size: 12px;
+    letter-spacing: 0.16em;
+    color: var(--text-muted);
+    line-height: 1.7;
+  }
+
+  .form {
+    animation: riseSoft 2.4s 0.5s cubic-bezier(0.16, 1, 0.3, 1) both;
+  }
+  .details {
+    animation: riseSoft 2.4s 0.8s cubic-bezier(0.16, 1, 0.3, 1) both;
+  }
+  .field {
+    animation: fadeInUp 2s both;
+  }
+  .field:nth-child(1) { animation-delay: 0.7s; }
+  .field:nth-child(2) { animation-delay: 0.95s; }
+  .field:nth-child(3) { animation-delay: 1.2s; }
+  input, textarea {
+    transition: border-color 0.3s, box-shadow 0.3s;
+  }
+  input:focus, textarea:focus {
+    border-color: #e8d48b !important;
+    box-shadow: 0 0 18px rgba(201,162,39,0.25);
+    outline: none;
+  }
+  .submit {
+    background-size: 200% 100%;
+    background-image: linear-gradient(110deg, #e8d48b 0%, #c9a227 35%, #f5e7a8 50%, #c9a227 65%, #8a6d1f 100%);
+    animation: shimmer 7s linear infinite, fadeInUp 2.2s 1.4s both;
+  }
+  .detail-item {
+    animation: fadeInUp 2s both;
+  }
+  .detail-item:nth-child(1) { animation-delay: 1.0s; }
+  .detail-item:nth-child(2) { animation-delay: 1.3s; }
+  .detail-item:nth-child(3) { animation-delay: 1.6s; }
+</style>
+</head>
+<body>
+<div class="page">
+  <div class="bg-motion" aria-hidden="true">
+    <div class="bg-motion__glow"></div>
+    <div class="bg-motion__grain"></div>
+  </div>
+
+  <header class="header">
+    <div class="brand">
+      <img class="brand-logo" src="assets/logo.jpeg" alt="Estate Liga crest" />
+      <span class="brand-text">ESTATE LIGA</span>
+    </div>
+    <nav>
+      <ul class="nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="properties.html">Properties</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a class="active" href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="main content">
+    <h1 class="page-title">CONTACT</h1>
+    <div class="gold-line"></div>
+    <div class="layout">
+      <form class="form" onsubmit="return false;">
+        <div class="field">
+          <label>Name</label>
+          <input type="text" placeholder="Your full name" value="" />
+        </div>
+        <div class="field">
+          <label>Email</label>
+          <input type="email" placeholder="you@example.com" value="" />
+        </div>
+        <div class="field">
+          <label>Message</label>
+          <textarea placeholder="Tell us about the estate you seek…"></textarea>
+        </div>
+        <button class="submit" type="button">Submit Inquiry</button>
+      </form>
+      <aside class="details">
+        <h2>ATELIER</h2>
+        <div class="detail-item">
+          <div class="label">Correspondence</div>
+          <div class="value">concierge@estateliga.com</div>
+        </div>
+        <div class="detail-item">
+          <div class="label">Telephone</div>
+          <div class="value">+41 22 555 0180</div>
+        </div>
+        <div class="detail-item">
+          <div class="label">Private Salon</div>
+          <div class="value">Geneva · By Appointment</div>
+        </div>
+        <p class="note">All inquiries are handled in confidence.<br/>Introductions typically within forty-eight hours.</p>
+      </aside>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <span>© Estate Liga</span>
+    <span>Private Correspondence <span class="diamond">◆</span> Confidential</span>
+    <span>estateliga.com</span>
+  </footer>
+</div>
+</body>
+</html>
