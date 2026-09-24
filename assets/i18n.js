@@ -161,7 +161,7 @@
       if (!/\.html(\?|$)/.test(href)) return;
       try {
         const url = new URL(href, location.href);
-        url.searchParams.set('v', '5');
+        url.searchParams.set('v', '6');
         // keep relative path
         const file = url.pathname.split('/').pop();
         a.setAttribute('href', file + '?' + url.searchParams.toString());

@@ -636,3 +636,17 @@ h1.page-title {
   line-height: 1.55;
   letter-spacing: 0.04em;
 }
+
+/* VB Organisation logo (wide) */
+.brand-logo { width: auto !important; height: 74px; object-fit: contain; background: #000; padding: 2px 4px; }
+@media (max-width: 1200px) { .brand-logo { height: 60px; } }
+@media (max-width: 900px) { .brand-logo { height: 52px; } }
+@media (max-width: 600px) { .brand-logo { height: 44px; } }
+
+.brand-text { white-space: nowrap; font-size: clamp(15px, 1.5vw, 24px) !important; letter-spacing: 0.18em !important; }
+.brand-logo { background: transparent !important; border: 0 !important; padding: 0 !important; mix-blend-mode: screen; }
+.watermark img, img.crest { mix-blend-mode: screen; background: transparent !important; }
+.watermark { background: transparent !important; }
+@media (max-width: 600px) { .brand-text { font-size: 15px !important; letter-spacing: 0.12em !important; } }
+.brand-logo, .watermark img, img.crest { mix-blend-mode: normal !important; box-shadow: none !important; border: 0 !important; background: transparent !important; border-radius: 0 !important; }
+img.crest { width: 240px !important; height: auto !important; }

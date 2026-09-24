@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>ESTATE LIGA — Home</title>
+<title>VB ORGANISATION — Home</title>
 <link rel="stylesheet" href="styles.css" />
 <style>
 
@@ -45,8 +45,8 @@
   .hero h1 {
     font-family: 'Cinzel', serif;
     font-weight: 600;
-    font-size: clamp(34px, 6.5vw, 92px);
-    letter-spacing: 0.28em;
+    font-size: clamp(28px, 5.6vw, 84px);
+    letter-spacing: 0.14em;
     line-height: 1.05;
     background: linear-gradient(180deg, #f8efc0 0%, #e8d48b 25%, #c9a227 55%, #8a6d1f 100%);
     -webkit-background-clip: text;
@@ -97,7 +97,7 @@
   /* responsive */
   @media (max-width: 900px) {
     .hero { padding: 24px 24px 16px; }
-    .hero h1 { font-size: 48px !important; letter-spacing: 0.16em !important; }
+    .hero h1 { font-size: 38px !important; letter-spacing: 0.08em !important; }
     .eyebrow { font-size: 10px; letter-spacing: 0.28em; margin-bottom: 18px; }
     .tagline { font-size: 18px; letter-spacing: 0.06em; max-width: 92%; }
     .cta-row { flex-direction: column; align-items: center; gap: 14px; margin-top: 32px; }
@@ -105,7 +105,7 @@
     .sub-label { margin-top: 36px; font-size: 10px; }
   }
   @media (max-width: 600px) {
-    .hero h1 { font-size: 34px !important; letter-spacing: 0.1em !important; }
+    .hero h1 { font-size: 26px !important; letter-spacing: 0.05em !important; }
     .tagline { font-size: 16px; }
   }
 
@@ -120,8 +120,8 @@
 
   <header class="header">
     <div class="brand">
-      <img class="brand-logo" src="assets/logo.jpeg" alt="Estate Liga crest" />
-      <span class="brand-text">ESTATE LIGA</span>
+      <img class="brand-logo" src="assets/logo-vb.png" alt="VB Organisation logo" />
+      <span class="brand-text">VB ORGANISATION</span>
     </div>
     <div class="header-right">
       <div class="lang-switch" role="group" aria-label="Language">
@@ -144,10 +144,10 @@
       </div>
       <nav>
         <ul class="nav">
-          <li><a class="active" href="index.html?v=5"><span data-i18n="nav_home">Home</span></a></li>
-          <li><a href="properties.html?v=5"><span data-i18n="nav_properties">Listings</span></a></li>
-          <li><a href="about.html?v=5"><span data-i18n="nav_about">About</span></a></li>
-          <li><a href="contact.html?v=5"><span data-i18n="nav_contact">Contact</span></a></li>
+          <li><a class="active" href="index.html?v=6"><span data-i18n="nav_home">Home</span></a></li>
+          <li><a href="properties.html?v=6"><span data-i18n="nav_properties">Listings</span></a></li>
+          <li><a href="about.html?v=6"><span data-i18n="nav_about">About</span></a></li>
+          <li><a href="contact.html?v=6"><span data-i18n="nav_contact">Contact</span></a></li>
         </ul>
       </nav>
     </div>
@@ -155,24 +155,24 @@
 
   <main class="main hero">
     <div class="glow"></div>
-    <div class="watermark"><img src="assets/logo.jpeg" alt="" /></div>
+    <div class="watermark"><img src="assets/logo-vb.png" alt="" /></div>
     <div class="hero-inner">
       <div class="eyebrow" data-i18n="eyebrow">Constanța · Mamaia · Romania</div>
-      <h1>ESTATE LIGA</h1>
+      <h1>VB ORGANISATION</h1>
       <div class="gold-line"></div>
       <p class="tagline" data-i18n="tagline">Homes by the Black Sea — for living, investing, and returning to the shore. We help you buy, sell, and rent in Constanța and Mamaia with clear advice and a local eye.</p>
       <div class="cta-row">
-        <a class="btn btn-solid" href="properties.html?v=5" data-i18n="cta_view">View listings</a>
-        <a class="btn btn-outline" href="contact.html?v=5" data-i18n="cta_contact">Contact</a>
+        <a class="btn btn-solid" href="properties.html?v=6" data-i18n="cta_view">View listings</a>
+        <a class="btn btn-outline" href="contact.html?v=6" data-i18n="cta_contact">Contact</a>
       </div>
       <div class="sub-label" data-i18n="by_appointment">Sales & rentals</div>
     </div>
   </main>
 
   <footer class="footer">
-    <span>© Estate Liga</span>
+    <span>© VB Organisation</span>
     <span data-i18n="footer_home">Sale & Rent ◆ Constanța · Mamaia</span>
-    <span>estateliga.com</span>
+    <span>Romania</span>
   </footer>
 </div>
   <script>
@@ -186,6 +186,6 @@
     return false;
   };
   </script>
-  <script src="assets/i18n.js?v=5" defer></script>
+  <script src="assets/i18n.js?v=6" defer></script>
 </body>
 </html>
